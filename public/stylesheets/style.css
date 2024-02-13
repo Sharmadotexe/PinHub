@@ -10,7 +10,7 @@ body {
 .container {
   background-color: white;
   width: 480px;
-  min-height: 650px;
+  padding-bottom: 30px;
   position: absolute;
   margin: auto;
   top: 50%;
@@ -144,4 +144,10 @@ hr {
   padding: 11px 20px;
   background-color: rgb(241, 236, 236);
   border-radius: 20px;
+}
+
+
+.error{
+  color: #df0812;
+  padding: 5px;
 }

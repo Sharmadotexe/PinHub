@@ -17,6 +17,7 @@ body {
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 450px;
   }
   
   .profile-picture {
@@ -68,7 +69,99 @@ body {
   .button:hover {
     background-color: #0056b3;
   }
-  
-  
 
- 
+  
+  .pin-container{
+    width: 1400px;
+    margin: 20px auto;
+    columns:4;
+    column-gap :40px;
+  }
+
+  .pin-container .boxx{
+    width: 100%;
+    margin-bottom: 25px;
+    break-inside: avoid;
+  }
+
+  .pin-container .boxx img{
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+
+  .logout{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+  }
+
+
+  .profile-section {
+    position: relative; /* Make the container positioned relative */
+    /* Add any other styling for the container as needed */
+}
+
+  /* Style for the plus button */
+#uploadButton {
+  background-color: #e60023; /* Adjust color as needed */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely within its container */
+    top: 50%; /* Position the button vertically in the middle */
+    right: 10px; /* Adjust the right spacing as needed */
+    transform: translateY(-50%); /* Center the button vertically */
+    display: flex;
+    justify-content: center; /* Align content horizontally to the center */
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.plus-icon {
+  height: max-content;
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  color: white; /* Adjust color as needed */
+  border-radius: 100%;
+
+}
+
+/* Style for the form when visible */
+#uploadForm.visible {
+  display: block; 
+}
+
+/* Default style for the form */
+#uploadForm {
+  display: none;
+  margin-top: 10px; /* Adjust spacing as needed */
+}
+
+/* Additional styling for the form */
+#uploadForm input[type="text"],
+#uploadForm input[type="file"],
+#uploadForm button {
+  margin-bottom: 5px; /* Adjust spacing as needed */
+}
+
+#uploadForm button {
+  background-color: #e60023; /* Adjust color as needed */
+  color: white; /* Adjust color as needed */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#uploadForm button:hover {
+  background-color: #ff4d5a; /* Adjust color as needed */
+}
+
+
+
+
+
