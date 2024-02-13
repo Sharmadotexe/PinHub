@@ -39,16 +39,37 @@
           <p class="tagline">Lorem ipsum dolor sit amet.</p>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptatum.</p>
           <a href="/logout"  class="button">Logout</a>
+          <div class="profile-section">
+            <button id="uploadButton">
+                <img src="../images/plus.jpg" alt="Upload" class="plus-icon">
+            </button>
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data" style="display: none;">
+                <input type="text" name="filecaption" placeholder="Enter caption">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        
+          <!-- <div class="logout">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="text" name="filecaption" placeholder="enter caption">
+            <input type="file" name="file">
+            <button type="submit" class="">Upload</button>
+          </form>
+        </div> -->
         </div>
     </div>
-    <div class="containerss">
-        <div class="card" style="width: 18rem;">
-            <img src="https://images.freeimages.com/images/large-previews/aed/three-bees-on-sunflower-1337029.jpg?fmt=webp&h=350" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">All Designs</h5>
+    <div class="pin-container">
+        <% user.posts.forEach(function (post) { %> 
+          <div class="boxx" style="width: 18rem;">
+              <img src="/images/uploads/<%= post.image%>" alt="...">
+              <div class="masonry-item">
+                <h5 class="card-title"><%= post.imageText%></h5>
+              </div>
             </div>
-          </div>
-    </div>
+        <%}) %>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../javascripts/profile.js"></script>
   </body>
 </html>

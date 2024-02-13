@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const plm = require("passport-local-mongoose")
 mongoose.connect("mongodb://127.0.0.1:27017/dataModeling")
 
 
@@ -11,7 +12,6 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true
     },
     posts: [{
         type:mongoose.Schema.Types.ObjectId,
@@ -25,12 +25,13 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    fullName: {
-        type: String
+    fullname: {
+        type: String,
+        required: true
     }
 });
 
+userSchema.plugin(plm)
 // Create User model
 module.exports = mongoose.model('User', userSchema);
-
 
